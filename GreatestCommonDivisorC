@@ -13,7 +13,7 @@ int main (){
   int num1, num2, remainder;
   
   // Ask user for the inputs
-  printf("Please enter two integers to find their GCD. Constraints: First Integer > Sescond. \n");
+  printf("Please enter two integers to find their GCD. Constraints: First Integer > Second Integer. \n");
   
   printf("First Integer: ");
   scanf("%d", &num1);
