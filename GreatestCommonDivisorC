@@ -13,10 +13,10 @@ int main (){
   // Ask user for the inputs
   printf("Please enter two integers to find their GCD:\n");
   
-  System.out.println("Divident value: ");
+  printf("Divident value: ");
   scanf("%d", &divident);
   
-  System.out.println("Divisor value: ");
+  printf("Divisor value: ");
   scanf("%d", &divident);
   
   // Use a while loop
