@@ -2,6 +2,8 @@
 
 /******* Java ********/
 
+// Constraints: num1 > num2
+
 import java.util.Scanner;
 
 public class GCD{
@@ -11,35 +13,35 @@ public class GCD{
     // Initialize the Scanner object
     Scanner scan = new Scanner(System.in);
     
-    // Declare the two integer variables (Dividend and Divisor) and remainder.
-    int dividend, divisor, remainder;
+    // Declare the two integer variables and remainder.
+    int num1, num2, remainder;
     
     // Ask user for the inputs
     System.out.println("Please enter two integers to find their GCD:");
     
-    System.out.println("Dividend value: ");
-    dividend = scan.nextInt();
+    System.out.println("First Integer: ");
+    num1 = scan.nextInt();
     
-    System.out.println("Divisor value: ");
-    divisor = scan.nextInt();
+    System.out.println("Second Integer: ");
+    num2 = scan.nextInt();
     
     // Use a while loop
-    while( divisor != 0){
+    while( num2 != 0){
     
-      //Find the reminder of the division (dividend/ divisor)
-      remainder = dividend % divisor;
+      //Find the reminder of the division num1 and num2
+      remainder = num1 % num2;
       
-      //Set the dividend equal to divisor.
-      dividend = divisor;  // dividend becomes divisor until the remainder = 0.
+      //Set num1 equal to num2.
+      num1 = num2;  // num1 becomes num2 until the remainder = 0.
       
-      //Set the divisor equal to the remainder.
-      divisor = remainder; // divisor becomes remainder
+      //Set the num2 equal to the remainder.
+      num2 = remainder; // num2 becomes remainder
       
-    } // the loop stop when divisor = 0.
+    } // the loop stop when num2 = 0.
     
-    // Print the Gretest Common Divisor which is "dividend" after many iterations. 
-    // Don't get confuse with the value of "dividend". It changes every iteration.
-    System.out.println("The GCD of those two integers is: " + dividend); 
+    // Print the Gretest Common Divisor which is "num1" after many iterations. 
+    // Don't get confuse with the value of "num1". It changes every iteration.
+    System.out.println("The GCD of those two integers is: " + num1); 
   
   }
 }
