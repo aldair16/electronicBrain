@@ -36,7 +36,10 @@ public class GCD{
   
   } // the loop stop when divisor = 0.
   
-  System.out.println("The GCD of those two integers is: " + divident); // Don't get confuse with the value of "divident". It changes every iteration.
+  // Print the Gretest Common Divisor which is "divident" after many iterations. 
+  // Don't get confuse with the value of "divident". It changes every iteration.
+  System.out.println("The GCD of those two integers is: " + divident); 
+  
 
 }
 
