@@ -5,41 +5,42 @@
 import java.util.Scanner;
 
 public class GCD{
-  
-  // Initialize the Scanner object
-  Scanner scan = new Scanner(System.in);
-  
-  // Declare the two integer variables (Divident and Divisor) and remainder.
-  int divident, divisor, remainder;
-  
-  // Ask user for the inputs
-  System.out.println("Please enter two integers to find their GCD:");
-  
-  System.out.println("Divident value: ");
-  divident = scan.nextInt();
-  
-  System.out.println("Divisor value: ");
-  divident = scan.nextInt();
-  
-  // Use a while loop
-  while( divisor != 0){
-  
-    //Find the reminder of the division (divident/ divisor)
-    remainder = divident % divisor;
-    
-    //Set the divident equal to divisor.
-    divident = divisor;  // divident becomes divisor until the remainder = 0.
-    
-    //Set the divisor equal to the remainder.
-    divisor = remainder; // divisor becomes remainder
-    
-  
-  } // the loop stop when divisor = 0.
-  
-  // Print the Gretest Common Divisor which is "divident" after many iterations. 
-  // Don't get confuse with the value of "divident". It changes every iteration.
-  System.out.println("The GCD of those two integers is: " + divident); 
-  
 
+  public static void main (){
+  
+    // Initialize the Scanner object
+    Scanner scan = new Scanner(System.in);
+    
+    // Declare the two integer variables (Divident and Divisor) and remainder.
+    int divident, divisor, remainder;
+    
+    // Ask user for the inputs
+    System.out.println("Please enter two integers to find their GCD:");
+    
+    System.out.println("Divident value: ");
+    divident = scan.nextInt();
+    
+    System.out.println("Divisor value: ");
+    divident = scan.nextInt();
+    
+    // Use a while loop
+    while( divisor != 0){
+    
+      //Find the reminder of the division (divident/ divisor)
+      remainder = divident % divisor;
+      
+      //Set the divident equal to divisor.
+      divident = divisor;  // divident becomes divisor until the remainder = 0.
+      
+      //Set the divisor equal to the remainder.
+      divisor = remainder; // divisor becomes remainder
+      
+    } // the loop stop when divisor = 0.
+    
+    // Print the Gretest Common Divisor which is "divident" after many iterations. 
+    // Don't get confuse with the value of "divident". It changes every iteration.
+    System.out.println("The GCD of those two integers is: " + divident); 
+  
+  }
 }
 
