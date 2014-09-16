@@ -2,6 +2,8 @@
 
 /******* C ********/
 
+// Constraints: num1 > num2
+
 #include <stdio.h>
 #include <stdlib.h>
 
