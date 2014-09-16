@@ -2,7 +2,7 @@
 
 /******* Java ********/
 
-import java.util.Scanner.
+import java.util.Scanner;
 
 public class GCD{
   
@@ -18,7 +18,7 @@ public class GCD{
   System.out.println("Divident value: ");
   divident = scan.nextInt();
   
-  System.out.println("Divident value: ");
+  System.out.println("Divisor value: ");
   divident = scan.nextInt();
   
   // Use a while loop
