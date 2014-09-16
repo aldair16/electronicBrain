@@ -9,7 +9,7 @@ public class GCD{
   // Initialize the Scanner object
   Scanner scan = new Scanner(System.in);
   
-  // Declare the two integer variables (Divident and Divisor)
+  // Declare the two integer variables (Divident and Divisor) and remainder.
   int divident, divisor, remainder;
   
   // Ask user for the inputs
