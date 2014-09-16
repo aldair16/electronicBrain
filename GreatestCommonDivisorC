@@ -7,35 +7,35 @@
 
 int main (){
   
-  // Declare the two integer variables (Dividend and Divisor) and remainder.
-  int dividend, divisor, remainder;
+  // Declare the two integer variables and remainder.
+  int num1, num2, remainder;
   
   // Ask user for the inputs
   printf("Please enter two integers to find their GCD:\n");
   
-  printf("Dividend value: ");
-  scanf("%d", &dividend);
+  printf("First Integer: ");
+  scanf("%d", &num1);
   
-  printf("Divisor value: ");
-  scanf("%d", &divisor);
+  printf("Second Integer: ");
+  scanf("%d", &num2);
   
   // Use a while loop
-  while( divisor != 0){
+  while( num2 != 0){
   
-    //Find the reminder of the division (dividend/ divisor)
-    remainder = dividend % divisor;
+    //Find the reminder of the division num1 and num2.
+    remainder = num1 % num2;
     
-    //Set the dividend equal to divisor.
-    dividend = divisor;  // dividend becomes divisor until the remainder = 0.
+    //Set num1 equal to num2.
+    num1 = num2;  // num1 becomes num2 until the remainder = 0.
     
-    //Set the divisor equal to the remainder.
-    divisor = remainder; // divisor becomes remainder
+    //Set num2 equal to the remainder.
+    num2 = remainder; // num2 becomes remainder
     
-  } // the loop stop when divisor = 0.
+  } // the loop stop when num2 = 0.
   
-  // Print the Gretest Common Divisor which is "dividend" after many iterations. 
-  // Don't get confuse with the value of "dividend". It changes every iteration.
-  printf("The GCD of those two integers is: %d", dividend); 
+  // Print the Gretest Common Divisor which is "num1" after many iterations. 
+  // Don't get confuse with the value of "num1". It changes every iteration.
+  printf("The GCD of those two integers is: %d", num1); 
   
   return 0;
  
