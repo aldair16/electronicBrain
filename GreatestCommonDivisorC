@@ -35,6 +35,8 @@ int main (){
   
   // Print the Gretest Common Divisor which is "divident" after many iterations. 
   // Don't get confuse with the value of "divident". It changes every iteration.
-  printf("The GCD of those two integers is: %d \n", divident); 
+  printf("The GCD of those two integers is: %d", divident); 
+  
+  return 0;
  
 }
