@@ -1,0 +1,40 @@
+// This program implements an algorithm that finds the Greatest Common Divisor of two integers using C language. 
+
+/******* C ********/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+  
+  // Declare the two integer variables (Divident and Divisor) and remainder.
+  int divident, divisor, remainder;
+  
+  // Ask user for the inputs
+  printf("Please enter two integers to find their GCD:\n");
+  
+  System.out.println("Divident value: ");
+  scanf("%d", &divident);
+  
+  System.out.println("Divisor value: ");
+  scanf("%d", &divident);
+  
+  // Use a while loop
+  while( divisor != 0){
+  
+    //Find the reminder of the division (divident/ divisor)
+    remainder = divident % divisor;
+    
+    //Set the divident equal to divisor.
+    divident = divisor;  // divident becomes divisor until the remainder = 0.
+    
+    //Set the divisor equal to the remainder.
+    divisor = remainder; // divisor becomes remainder
+    
+  } // the loop stop when divisor = 0.
+  
+  // Print the Gretest Common Divisor which is "divident" after many iterations. 
+  // Don't get confuse with the value of "divident". It changes every iteration.
+  printf("The GCD of those two integers is: %d \n", divident); 
+ 
+}
