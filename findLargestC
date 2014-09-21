@@ -1,0 +1,36 @@
+/* This algorithm finds the largest integer of any size array (see constrains). 
+ * 
+ * Constrains: where the the array size is < integer data type. 
+ * 
+ * File:   
+ * Author: Aldair
+ *
+ * Created on September 20, 2014, 11:02 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    
+    // Define the array with some values. Or you can read integer from an external 
+    //file (code not written). 
+    int myarray[] = {3677, 23, 95, 445, 89, 78, 455, 89, 2, 67869, 3546776};
+    
+    // Set the first integer values as the largest one. 
+    int largest = myarray[0];
+    
+    // Calculate the size of the array. 
+    int size = sizeof(myarray) / sizeof(myarray[0]);
+    
+    // Iterate through all the values in the array, comparing which is the largest
+    // integer. 
+    for (int i =1; i < size; i++){
+        if (myarray[i] > largest) // if second element is greater than first element 
+            largest = myarray[i]; // then set the largest equal to the second one. 
+    }                             // and so on until the compare all elements. 
+    
+    // print the largest integer
+    printf("Largest Number: %d", largest);
+    
+    return 0;
+}
