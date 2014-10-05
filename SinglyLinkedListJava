@@ -1,0 +1,155 @@
+/**
+ *
+ * @author Aldair
+ */
+ 
+ 
+import java.util.*;
+public class MyIntegerLinkedList {
+
+    public static void main(String[] args) {
+        // Create a new object
+        IntegerLinkedList myList = new IntegerLinkedList();
+        
+        myList.add("45");
+        myList.add("2");
+        myList.add("16", 2);
+        
+        
+        System.out.println("My List: " + myList);
+        System.out.println("My List size: " + myList.size());
+    }
+    
+}
+
+/******************   This is the subclass Linked List of integers  *************************/
+public class IntegerLinkedList{
+    
+    private IntegerCell top;
+    public int listCount;
+
+    //Constructor
+    IntegerLinkedList(){
+        top = new IntegerCell(null);
+        listCount = 0;
+    }
+    
+    // adding a new element into the Linked List
+    public void add(int data){
+        IntegerCell temp = new IntegerCell(data);
+        IntegerCell current = top;      // This line is similar to: IntegerCell current = new new IntegerCell(null);
+        
+        while(current.getNext() != null){ // Since we have an empty Linked Linked, the first value is null and therefore the first iteration is skipped.
+            current = getNext();
+        }
+        
+        // the last cell's "next" reference set to our new cell
+        current.setNext(temp);    // null points to temp value
+        listCount++;// increment the number of elements variable
+    }
+    
+    // inserts the specified element at the specified position in this list
+    public void add(int data, int index){
+        IntegerCell temp = new IntegerCell(data);
+        IntegerCell current = top;
+        // crawl to the requested index or the last element in the list,
+        // whichever comes first
+        for (int i = 1; i < index && current.getNext() != null; i++) {
+            current = current.getNext();
+        }
+        // set the new cell's next-cell reference to this cell's next-cell
+        // reference
+        temp.setNext(current.getNext());
+        // now set this cell's next-cell reference to the new cell
+        current.setNext(temp);
+        listCount++;// increment the number of elements variable
+    }
+    
+    public int get(int index)
+    // returns the element at the specified position in this list.
+    {
+        // index must be 1 or higher
+        if (index <= 0)
+            return null;
+ 
+        IntegerCell current = top.getNext();
+        for (int i = 1; i < index; i++) {
+            if (current.getNext() == null)
+                return null;
+ 
+            current = current.getNext();
+        }
+        return current.getData();
+    }
+    
+    public boolean remove(int index)
+    // removes the element at the specified position in this list.
+    {
+        // if the index is out of range, exit
+        if (index < 1 || index > size())
+            return false;
+ 
+        IntegerCell current = top;
+        for (int i = 1; i < index; i++) {
+            if (current.getNext() == null)
+                return false;
+ 
+            cCurrent = current.getNext();
+        }
+        current.setNext(current.getNext().getNext());
+        listCount--; // decrement the number of elements variable
+        return true;
+    }
+    
+    public int size()
+    // returns the number of elements in this list.
+    {
+        return listCount;
+    }
+ 
+    
+    // This method is necessary to print the output
+    public String toString() {
+        IntegerCell current = top.getNext();
+        String output = "";
+        while (current != null) {
+            output += "[" + current.getData().toString() + "]";
+            current = current.getNext();
+        }
+        return output;
+    }
+    
+
+}
+/******************  This is the subclass of the Cell implementation ***********************/
+public class IntegerCell {
+    public int Value;
+    public IntegerCell next;  // This line makes the class iterate over itself. 
+    
+    // Constructor
+    IntegerCell(int dataValue){
+        next = null;
+        Value = dataValue;
+    }
+    
+    // These methods are self-explenatory
+    public int getData(){
+        return Value;
+    }
+    
+    public void setData(int dataValue){
+        Value = dataValue;
+    }
+    
+    public IntegerCell getNext(){
+        return next;
+    }
+    
+    public void setNext(IntegerCell dataValue){
+        next = dataValue;
+    }
+}
+
+
+
+
